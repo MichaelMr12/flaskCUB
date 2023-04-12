@@ -33,7 +33,9 @@ def webhook():
     else:
         return 'Wrong event type', 400
 
-
+@app.route('/caucau')
+def caucau():
+    return render_template('Caucasus.html')
 
 def connect_db():
     conn = sqlite3.connect(app.config['DATABASE'])
